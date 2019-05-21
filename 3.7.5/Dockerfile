@@ -2,7 +2,7 @@ FROM dimeb/docker-alpine:3.8
 
 ENV PGPOOL_VERSION 3.7.5-r0
 
-RUN apk add --no-cache curl pgpool \
+RUN apk add --no-cache pgpool \
     && mkdir -p /var/run/pgpool/ /pgpoolII
 
 ENV PG_USERNAME postgres
