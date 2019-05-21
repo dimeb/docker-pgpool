@@ -5,7 +5,7 @@ ENV PGPOOL_VERSION 3.7.5-r0
 RUN apk add --no-cache curl pgpool \
     && mkdir -p /var/run/pgpool/ /pgpoolII
 
-COPY entrypoint.sh /
+COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 ENV PG_USERNAME postgres
