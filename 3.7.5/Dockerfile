@@ -15,9 +15,9 @@ EXPOSE 9999
 # PCP port
 EXPOSE 9898
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["pgpool", "-n", "-f", "/pgpoolII/pgpool.conf", "-F", "/pgpoolII/pcp.conf", "-a", "/pgpoolII/pool_hba.conf"]
 
