@@ -14,6 +14,8 @@ VOLUME ["/pgpoolII/config", "/pgpoolII/data", "/pgpoolII/logs"]
 EXPOSE 9999
 # PCP port
 EXPOSE 9898
+# Heartbeat port
+EXPOSE 9694
 # Watchdog port
 EXPOSE 9000
 
