@@ -21,8 +21,9 @@ EXPOSE 9000
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["pgpool", "-n", "-f", "/pgpoolII/config/pgpool.conf", "-F", "/pgpoolII/config/pcp.conf", "-a", "/pgpoolII/config/pool_hba.conf", ">", "/pgpoolII/logs/pgpool.log", "2>&1"]
+CMD ["pgpool", "-n", "-f", "/pgpoolII/config/pgpool.conf", "-F", "/pgpoolII/config/pcp.conf", "-a", "/pgpoolII/config/pool_hba.conf"]
 
 

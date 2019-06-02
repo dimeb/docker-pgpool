@@ -17,4 +17,4 @@ echo "$PG_USERNAME:`/usr/bin/pg_md5 ${PG_PASSWORD}`" > $fname
 
 /usr/bin/pg_md5 -m -f /pgpoolII/config/pgpool.conf -u ${PG_USERNAME} ${PG_PASSWORD}
 
-exec "$@"
+exec "$@" > /pgpoolII/logs/pgpool.log 2>&1
