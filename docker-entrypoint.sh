@@ -2,6 +2,9 @@
 
 set -e
 
+IFS="
+"
+
 fname=/pgpoolII/config/pcp.conf
 f=`cat $fname`
 cat < dev/null > $fname
