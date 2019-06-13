@@ -3,13 +3,13 @@
 set -e
 
 if [ ! -f /pgpoolII/config/pcp.conf ]; then
-  cp /etc/pcp.conf.sample /pgpoolII/config/pcp.conf
+  cp /etc/pcp.conf /pgpoolII/config/pcp.conf
 fi
 if [ ! -f /pgpoolII/config/pool_hba.conf ]; then
-  cp /etc/pool_hba.conf.sample /pgpoolII/config/pool_hba.conf
+  cp /etc/pool_hba.conf /pgpoolII/config/pool_hba.conf
 fi
 if [ ! -f /pgpoolII/config/pgpool.conf ]; then
-  cp /etc/pgpool.conf.sample /pgpoolII/config/pgpool.conf
+  cp /etc/pgpool.conf /pgpoolII/config/pgpool.conf
 fi
 
 fname=/pgpoolII/config/pcp.conf
