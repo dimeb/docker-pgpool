@@ -20,9 +20,7 @@ EXPOSE 9000
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-COPY /etc/pcp.conf.sample ${PCP_CONF_FILE} /pgpoolII/config/
-COPY /etc/pool_hba.conf.sample ${POOL_HBA_CONF_FILE} /pgpoolII/config/
-COPY /etc/pgpool.conf.sample ${PGPOOL_CONF_FILE} /pgpoolII/config/
+COPY /etc/pcp.conf.sample ${PCP_CONF_FILE} ${POOL_HBA_CONF_FILE} ${PGPOOL_CONF_FILE} /pgpoolII/config/
 
 VOLUME ["/pgpoolII/config", "/pgpoolII/data", "/pgpoolII/logs"]
 
