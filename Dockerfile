@@ -2,8 +2,11 @@ FROM dimeb/docker-alpine:3.8
 
 ENV PGPOOL_VERSION 3.7.9-r0
 
-RUN apk add --no-cache pgpool \
-    && mkdir -p /var/run/pgpool/ /pgpoolII/config /pgpoolII/data /pgpoolII/logs
+RUN apk add --no-cache pgpool && \
+    mkdir -p /var/run/pgpool/ \
+            /pgpoolII/config \
+            /pgpoolII/data \
+            /pgpoolII/logs
 
 ENV PG_USERNAME postgres
 ENV PG_PASSWORD postgres
